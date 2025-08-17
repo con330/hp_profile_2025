@@ -1,0 +1,307 @@
+<html lang="ja"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>こん・ちえん | プロフィール</title>
+  <meta name="description" content="哲学者・芸術家 こん・ちえん（Con Chien）のプロフィール、思想、作品ギャラリー。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1b1d22;
+      --muted: #6b7280;
+      --accent: #b48b16; /* elegant gold */
+      --line: #e6e7eb;
+      --card: #ffffff;
+      --shadow: 0 8px 28px rgba(9, 12, 22, .06);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--fg); }
+    body { font-family: "Zen Kaku Gothic New", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height:1.9; }
+    h1, h2, h3 { font-family: "Noto Serif JP", serif; line-height:1.3; letter-spacing:.02em; }
+    h1 { font-weight:700; }
+    img { max-width:100%; height:auto; display:block; }
+    a { color: var(--fg); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+    /* Header */
+    header { position:sticky; top:0; z-index:40; background:rgba(255,255,255,.8); backdrop-filter: blur(6px); border-bottom:1px solid var(--line); }
+    .container { width:min(1100px, 92%); margin:0 auto; }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+    .brand { font-family:"Noto Serif JP", serif; font-weight:700; letter-spacing:.06em; font-size:1.05rem; }
+    nav a { margin-left:18px; font-size:.95rem; color:#2d3748; }
+
+    /* Hero */
+    .hero { position:relative; padding:72px 0 60px; }
+    .hero-inner { display:grid; grid-template-columns: 1.1fr .9fr; gap:34px; align-items:center; }
+    @media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } }
+    .eyebrow { color:var(--accent); letter-spacing:.2em; font-size:.78rem; text-transform:uppercase; }
+    .title { font-size:clamp(2.1rem, 4.2vw, 3.4rem); margin:.25rem 0 1rem; }
+    .subtitle { color:#4b5563; font-size:1.05rem; }
+    .frame { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:12px; box-shadow: var(--shadow); }
+    .matted img { border-radius:12px; border:1px solid var(--line); }
+    .caption { color:#6b7280; font-size:.85rem; margin-top:8px; text-align:center; }
+
+    /* Sections */
+    section { padding:68px 0; }
+    .lead { font-size:1.15rem; color:#2b2f36; }
+    .statement {
+      font-family:"Noto Serif JP", serif; font-size:1.25rem; line-height:2;
+      background:linear-gradient(0deg, rgba(180,139,22,.08), rgba(255,255,255,0) 70%);
+      border-left:3px solid var(--accent); padding:20px 22px; border-radius:10px;
+    }
+
+    /* Cards / layout */
+    .grid { display:grid; gap:26px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @media (max-width: 900px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+    .card { background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow: var(--shadow); }
+    .pad { padding:22px; }
+    .label { display:inline-block; padding:4px 10px; border-radius:999px; border:1px solid var(--line); color:#475569; font-size:.78rem; letter-spacing:.06em; background:#fafafa; }
+
+    /* Gallery */
+    .gallery img { border-radius:12px; border:1px solid var(--line); }
+    .gallery figure { margin:0; }
+    .gallery figcaption { color:#6b7280; font-size:.85rem; }
+
+    /* Contact */
+    .btn { display:inline-block; border:1px solid var(--line); padding:11px 16px; border-radius:999px; font-weight:600; }
+    .btn.primary { background:linear-gradient(135deg, #e9d8a6, #fef9c3); border-color:#e7e0b8; color:#1b1d22; }
+    .muted { color:var(--muted); }
+
+    /* Footer */
+    footer { padding:60px 0; border-top:1px solid var(--line); color:#6b7280; text-align:center; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">こん・ちえん</div>
+      <nav aria-label="主要ナビゲーション">
+        <a href="#about">プロフィール</a>
+        <a href="#philo">思想</a>
+        <a href="#gallery">作品</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <div class="eyebrow">Con Chien –／芸術家/ 思想家</div>
+          <h1 id="hero-title" class="title">空間の純度と予感</h1>
+          <p class="subtitle">絵画は、言葉の外側で成立するもうひとつの思考。視覚・時間・身体の交差が、偶然の形をした必然を立ち上げる。</p>
+        </div>
+        <div class="frame matted" style="
+    text-align: center;
+">
+          <img src="img/0.jpg" height="50px;" alt="作品サンプル（淡い黄の広がり）" style="
+    width: 309px;
+">
+          <div class="caption">2023年 hikari</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title" style="
+    /* margin-left: 30px; */
+">
+      <div class="container grid grid-2">
+        <div>
+          <h2 id="about-title">プロフィール</h2>
+          <p class="lead">こん・ちえん（Con Chien）。哲学と絵画を往復しながら、「空間の純度」を主題に制作・記述する。絵画を〈思想の実験室〉として、視覚と言語のあわいに生じる必然を探る。</p>
+          <div class="statement" style="margin-top:18px">
+            描く前に主題を定めない。まず空間の純度を極限まで澄ませ、その場に立ち上がる縁起を掴む。<br>
+            画面と色を引き寄せ、魂が自ら転写される瞬間を待つ。
+          </div>
+          
+        </div>
+        <figure class="card">
+          <img src="img/1.jpg" alt="青を基調とした抽象画の作品">
+<div class="caption" style="
+    padding-bottom: 10px;
+">2025年 sakura sola</div>
+        </figure>
+      </div>
+    </section>
+
+<article class="card" style="margin-top:26px;margin-left: 30px;margin-right: 30px;"><div class="pad">
+      <h3 data-lang="ja">思想ステートメント（長文）</h3>
+      <h3 data-lang="en">Long Statement</h3>
+
+      <p data-lang="ja">私にとって絵画は、世界を計測する器具ではない。主題は設計せず、まず空間の濁りを鎮め、純度を静かに引き上げる行に身を置く。その場に集まる縁起の結び目を見極め、画面と色を呼吸のように引き寄せ、介入と待機の閾で手を止める。可視化とは支配ではなく応答であり、内奥の運動が他者に触れ得る像へと沈着する過程だ。数値では捉えられない“はい／いいえ”の微かな予感こそ羅針盤となり、作品は一回性の証言として静かに残る。</p>
+
+      <p data-lang="en">Painting is not an instrument for measuring the world. I refuse predesigned themes and first clarify space, raising its purity. I read the knots of conditions, draw surface and color like breathing, and pause at the threshold between intervening and waiting. Visualization is response rather than control—the inner motion settling into images others can touch. A non-numeric sense of yes/no orients the work; each piece remains as testimony to a singular event.</p>
+    </div></article>
+
+    
+
+<section id="philo">
+  <div class="container">
+    
+    
+
+    <!-- 6つの思想カード（絵画と哲学の橋渡し） -->
+    <div class="grid grid-3" style="margin-top:18px">
+      <article class="card"><div class="pad">
+        <span class="label" data-lang="ja">空間</span><span class="label" data-lang="en">Space</span>
+        <h3 data-lang="ja">純度と気配</h3><h3 data-lang="en">Purity &amp; Presence</h3>
+        <p data-lang="ja">空間は条件の結び目から立ち上がる。澄み／歪みの差異は数値ではなく、記憶の奥に沈む予感で測られる。</p>
+        <p data-lang="en">Space arises from knots of conditions. The difference between clarity and distortion is sensed, not counted.</p>
+      </div></article>
+
+      <article class="card"><div class="pad">
+        <span class="label" data-lang="ja">縁起</span><span class="label" data-lang="en">Conditions</span>
+        <h3 data-lang="ja">参加としての制作</h3><h3 data-lang="en">Creation as Participation</h3>
+        <p data-lang="ja">制作は制御ではない。時間・身体・環境が交差する一点で、偶然の形をした必然に応答する。</p>
+        <p data-lang="en">Making is not control. At the crossing of time, body, and environment, one responds to necessity in the mask of chance.</p>
+      </div></article>
+
+      <article class="card"><div class="pad">
+        <span class="label" data-lang="ja">魂の転写</span><span class="label" data-lang="en">Transcription</span>
+        <h3 data-lang="ja">内奥の可視化</h3><h3 data-lang="en">Interior Visible</h3>
+        <p data-lang="ja">色は呼吸、画面は場。純度が上がるほど、内的運動は他者に触れ得る像へ沈着する。</p>
+        <p data-lang="en">Color is breath; the surface a field. As purity rises, inner motion precipitates into shareable images.</p>
+      </div></article>
+
+      <article class="card"><div class="pad">
+        <span class="label" data-lang="ja">時間</span><span class="label" data-lang="en">Time</span>
+        <h3 data-lang="ja">一回性の倫理</h3><h3 data-lang="en">Ethics of the Singular</h3>
+        <p data-lang="ja">時間は連続ではなく結節として到来する。一回性を逃さぬために、介入と待機の閾で手を止める。</p>
+        <p data-lang="en">Time arrives as nodes, not continuum. One pauses at the threshold between intervention and waiting.</p>
+      </div></article>
+
+      <article class="card"><div class="pad">
+        <span class="label" data-lang="ja">注視の倫理</span><span class="label" data-lang="en">Ethics of Attention</span>
+        <h3 data-lang="ja">支配ではなく応答</h3><h3 data-lang="en">Response, Not Control</h3>
+        <p data-lang="ja">可視化は支配ではない。見える／見えないの温度差に応答し、像を強いずに招き入れる。</p>
+        <p data-lang="en">To make visible is to respond. Attend to gradients of the seen and unseen; invite, do not force, the image.</p>
+      </div></article>
+
+      <article class="card"><div class="pad">
+        <span class="label" data-lang="ja">言語と沈黙</span><span class="label" data-lang="en">Language &amp; Silence</span>
+        <h3 data-lang="ja">言葉以前の肯定</h3><h3 data-lang="en">Pre-linguistic Affirmation</h3>
+        <p data-lang="ja">言葉は遅れて到着する。まず沈黙のうちに“はい／いいえ”の微細な勾配を聴き取る。</p>
+        <p data-lang="en">Language arrives late. First, listen to the fine gradient of yes/no within silence.</p>
+      </div></article>
+    </div>
+
+    <!-- 長文ステートメント（約300字） -->
+    
+  </div>
+</section>
+
+<section id="poems">
+  <div class="container">
+    <h2 data-lang="ja">散文詩</h2>
+    <h2 data-lang="en">Prose</h2>
+
+    <!-- A. 絵画についての断章 -->
+    <h3 class="muted" style="margin-top:8px" data-lang="ja">— 絵画について</h3>
+    <h3 class="muted" style="margin-top:8px" data-lang="en">— On Painting</h3>
+    <div class="grid grid-2" style="margin-top:12px">
+      <article class="card"><div class="pad">
+        <h4 data-lang="ja">断章 I</h4><h4 data-lang="en">Fragment I</h4>
+        <blockquote class="poem" data-lang="ja">美とは、空間に然るべき陰を彫る技であり、魂が共鳴している状態である。</blockquote>
+        <blockquote class="poem" data-lang="en">Beauty is the carving of a rightful shadow into space—the state in which the soul resonates.</blockquote>
+      </div></article>
+
+      <article class="card"><div class="pad">
+        <h4 data-lang="ja">断章 II</h4><h4 data-lang="en">Fragment II</h4>
+        <blockquote class="poem" data-lang="ja">経験に紐づかない違和感は、未知の必然が近づく前触れである。</blockquote>
+        <blockquote class="poem" data-lang="en">A disquiet unmoored from experience is the foretoken of an unknown necessity.</blockquote>
+      </div></article>
+
+      <article class="card"><div class="pad">
+        <h4 data-lang="ja">断章 III</h4><h4 data-lang="en">Fragment III</h4>
+        <blockquote class="poem" data-lang="ja">画面は場であり、色は呼吸である。呼吸が整うとき像は自ら来る。</blockquote>
+        <blockquote class="poem" data-lang="en">The surface is a field; color is breath. When breath settles, the image arrives of itself.</blockquote>
+      </div></article>
+
+      <article class="card"><div class="pad">
+        <h4 data-lang="ja">断章 IV</h4><h4 data-lang="en">Fragment IV</h4>
+        <blockquote class="poem" data-lang="ja">所有と喪失は、完全な空間の前では同じ身振りになる。</blockquote>
+        <blockquote class="poem" data-lang="en">Before a whole space, possession and loss become the same gesture.</blockquote>
+      </div></article>
+    </div>
+
+    <!-- B. 哲学の散文詩 -->
+    <h3 class="muted" style="margin-top:28px" data-lang="ja">— 哲学の散文詩</h3>
+    <h3 class="muted" style="margin-top:28px" data-lang="en">— Philosophical Prose</h3>
+    <div class="grid grid-2" style="margin-top:12px">
+      <article class="card"><div class="pad">
+        <h4 data-lang="ja">哲学断章 A</h4><h4 data-lang="en">Philosophy A</h4>
+        <blockquote class="poem" data-lang="ja">真理とは、証明の前に私たちを呼び寄せる呼びかけの形式である。</blockquote>
+        <blockquote class="poem" data-lang="en">Truth is a form of calling that draws us before proof arrives.</blockquote>
+      </div></article>
+
+      <article class="card"><div class="pad">
+        <h4 data-lang="ja">哲学断章 B</h4><h4 data-lang="en">Philosophy B</h4>
+        <blockquote class="poem" data-lang="ja">自由は選択肢の多さではなく、選ぶに値する一回性へ身を預ける勇気で量られる。</blockquote>
+        <blockquote class="poem" data-lang="en">Freedom is not the number of options but the courage to entrust oneself to a singularity worth choosing.</blockquote>
+      </div></article>
+
+      <article class="card"><div class="pad">
+        <h4 data-lang="ja">哲学断章 C</h4><h4 data-lang="en">Philosophy C</h4>
+        <blockquote class="poem" data-lang="ja">倫理は規則ではない。他者の沈黙の温度差に気づく感受性の勾配である。</blockquote>
+        <blockquote class="poem" data-lang="en">Ethics is not rule but a gradient of sensitivity to the temperature of another’s silence.</blockquote>
+      </div></article>
+
+      <article class="card"><div class="pad">
+        <h4 data-lang="ja">哲学断章 D</h4><h4 data-lang="en">Philosophy D</h4>
+        <blockquote class="poem" data-lang="ja">思考は言葉で完結しない。沈黙が方向を、比喩が速度を、論証が輪郭を与える。</blockquote>
+        <blockquote class="poem" data-lang="en">Thinking does not finish in words: silence gives direction, metaphor speed, and argument its contour.</blockquote>
+      </div></article>
+    </div>
+
+    <p class="muted" style="margin-top:10px" data-lang="ja">※ 文言は著者制作ノートより構成（英訳付）。</p>
+    <p class="muted" style="margin-top:10px" data-lang="en">* Texts adapted from the artist’s working notes (with translations).</p>
+  </div>
+</section>
+
+    <section id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 id="gallery-title">作品</h2>
+        <div class="grid grid-3" style="margin-top:18px">
+          <figure class="gallery card"><img src="img/2.jpg" alt="赤と緑のダイナミズムを感じさせる抽象画"><figcaption class="pad">Work I</figcaption></figure>
+          <figure class="gallery card"><img src="img/2.jpg" alt="青の濃淡が重なる抽象画"><figcaption class="pad">Work II</figcaption></figure>
+          <figure class="gallery card"><img src="img/3.jpg" alt="黄色を主体にした光の広がりを持つ抽象画"><figcaption class="pad">Work III</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    
+
+<section id="contact" aria-labelledby="contact-title">
+      <div class="container grid grid-2">
+        <div>
+          <h2 id="contact-title">お問い合わせ</h2>
+          <p class="lead">展示・購入・共同制作などのご相談は下記よりご連絡ください。</p>
+          <p><a class="btn primary" href="mailto:contact@example.com?subject=お問い合わせ%20(こん・ちえん)">メールを送る</a></p>
+          <p class="muted" style="margin-top:8px;">※ アドレスは仮です。公開用のメールまたはフォームURLに差し替えてください。</p>
+        </div>
+        <article class="card">
+          <div class="pad">
+            <span class="label">SNS / Links</span>
+            <ul>
+              <li><a href="#" target="_blank" rel="noopener">Instagram</a>（作品日誌）</li>
+              <li><a href="#" target="_blank" rel="noopener">X (Twitter)</a>（お知らせ）</li>
+              <li><a href="#" target="_blank" rel="noopener">Portfolio PDF</a>（準備中）</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2025 Con Chien. All rights reserved.</div>
+  </footer>
+
+
+</body></html>
