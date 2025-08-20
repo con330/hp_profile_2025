@@ -74,6 +74,50 @@
 
     /* Footer */
     footer { padding:60px 0; border-top:1px solid var(--line); color:#6b7280; text-align:center; }
+    
+    
+    /* ===== Mobile: stack JA/EN buttons in two rows ===== */
+@media (max-width: 560px) {
+  /* ヘッダー全体を折り返し可能に */
+  .nav {
+    flex-wrap: wrap;
+    row-gap: 8px;
+    align-items: flex-start;
+  }
+
+  /* ナビ本体は幅いっぱいにしてリンク群とボタン群が段落ちできるように */
+  header nav.lang-switch {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  /* 言語ボタンコンテナ（navの中の内側.lang-switch）を縦並びに */
+  header nav.lang-switch > .lang-switch {
+    display: grid;
+    grid-template-columns: 1fr; /* 1列＝2段表示 */
+    gap: 6px;
+    margin-left: 0 !important;
+    margin-top: 8px;
+    width: 100%;
+    max-width: 180px; /* ボタン幅の上限（必要なら調整） */
+  }
+
+  /* ボタンを横幅いっぱいにして指で押しやすく */
+  header nav.lang-switch > .lang-switch .lang-btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px 12px;
+    font-size: .9rem;
+  }
+
+  /* ナビのリンクの間隔をやや詰めて折り返し時の見た目を整える */
+  header nav.lang-switch > a {
+    margin-left: 12px;
+    font-size: .9rem;
+  }
+}
+
   </style>
 </head>
 <body>
