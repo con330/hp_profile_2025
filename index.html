@@ -92,6 +92,49 @@
 
     /* Footer */
     footer { padding:60px 0; border-top:1px solid var(--line); color:#6b7280; text-align:center; }
+    
+    /* === SmartPhone header nav fix === */
+@media (max-width: 600px) {
+  /* 左右の余白を少し詰める */
+  .nav { padding:10px 0; }
+
+  /* ブランド名も微調整 */
+  .brand { font-size: .95rem; }
+
+  /* ヘッダー内ナビ：折り返さず横並び＋指で横スクロール可 */
+  header nav.lang-switch {
+    flex-wrap: nowrap;          /* 折り返し禁止 */
+    white-space: nowrap;        /* テキストも折り返さない */
+    overflow-x: auto;           /* はみ出したら横スクロール */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;      /* モダンブラウザで細いスクロールバー */
+    gap: 10px;                  /* 余白を少し詰める（.lang-switchのgapを上書き） */
+  }
+
+  /* 子要素を縮ませず横一列キープ */
+  header nav.lang-switch > * {
+    flex: 0 0 auto;
+  }
+
+  /* メニューリンクの文字とマージンを縮小 */
+  header nav.lang-switch a {
+    font-size: .84rem;          /* もと: .95rem */
+    margin-left: 12px;          /* もと: 18px */
+  }
+
+  /* 言語切替ボタンも小ぶりに */
+  .lang-btn {
+    padding: 4px 8px;           /* もと: 6px 10px */
+    font-size: .78rem;          /* もと: .85rem */
+  }
+
+  /* 言語切替ボタンのラッパーも折り返し禁止で横に流す */
+  header nav.lang-switch .lang-switch {
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+}
+    
   </style>
 </head>
 <body>
