@@ -1,0 +1,338 @@
+:root{
+  --bg:#ffffff;
+  --text:#111;
+  --muted: rgba(17,17,17,0.62);
+  --line: rgba(17,17,17,0.14);
+  --shadow: 0 14px 50px rgba(0,0,0,0.10);
+  --radius: 12px;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a{ color:inherit; }
+.muted{ color: var(--muted); }
+.p{ margin:0; line-height:1.9; color: var(--muted); }
+
+.container{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 22px 16px;
+}
+
+.page{ min-height:100vh; }
+
+/* Header: テキストだけの静かなナビ */
+.header{
+  position: sticky;
+  top:0;
+  z-index: 30;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.headerInner{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap: 14px;
+}
+.brand{
+  text-decoration:none;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-size: 12px;
+}
+.nav{ display:flex; gap: 12px; flex-wrap: wrap; }
+.navLink{
+  text-decoration:none;
+  font-size: 12px;
+  color: var(--muted);
+}
+.navLinkActive{
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Top cover: 350px / 100vw フルブリード */
+.cover{
+  width: 100vw;
+  height: 350px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+.coverImg{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+}
+
+/* Typography: 見出しは控えめ */
+.pageTitle{
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+.rule{
+  height: 1px;
+  background: var(--line);
+  margin: 12px 0 14px;
+}
+
+/* ○ 箇条書き（参照サイトの雰囲気） */
+.circleList{
+  margin: 0;
+  padding-left: 1.15em;
+  color: var(--text);
+  line-height: 2.0;
+}
+.circleList li{
+  color: var(--text);
+}
+.circleList li::marker{
+  color: var(--text);
+}
+
+/* Paper */
+.paper{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+
+/* Form */
+.field{ display:block; margin-bottom: 12px; }
+.label{
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.55);
+  margin-bottom: 6px;
+}
+.input{
+  width:100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  outline: none;
+}
+.input:focus{ border-color: rgba(17,17,17,0.28); }
+.btn{
+  display:inline-flex;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(17,17,17,0.22);
+  background: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn:hover{ background: rgba(0,0,0,0.03); }
+
+/* Paintings: 年区切り */
+.yearSection{ margin: 0; }
+.yearHead{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  margin: 10px 0 10px;
+}
+.yearLabel{
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.yearRule{
+  height: 1px;
+  background: var(--line);
+  flex: 1;
+}
+.sectionGap{ height: 10px; }
+
+/* Paintings: アイコン（+20px → 92px） */
+.iconGrid{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-start;
+}
+.iconGrid .iconBtn{
+  width: 112px;
+  height: 112px;
+  flex: 0 0 112px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 0;          /* ← 四角（角丸なし） */
+  background: #fff;
+  cursor: pointer;
+  overflow:hidden;
+}
+
+.iconGrid .iconBtn:hover{
+  border-color: rgba(17,17,17,0.26);
+}
+
+.iconGrid .iconImg{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+}
+/* Lightbox */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 18px;
+}
+.lightboxBackdrop{
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.80);
+}
+.lightboxPanel{
+  position: relative;
+  width: min(1040px, 92vw);
+  border-radius: 14px;
+  overflow:hidden;
+  background: #111;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.55);
+}
+.lightboxImg{
+  width:100%;
+  height: min(78vh, 760px);
+  object-fit: contain;
+  background: #111;
+  display:block;
+}
+.lbCaption{
+  padding: 10px 12px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.86);
+  font-size: 12px;
+}
+.lbTitle{ font-weight: 700; }
+.lbMeta{ opacity: 0.75; margin-top: 2px; }
+
+/* Prev/Next */
+.lbNav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.35);
+  color: rgba(255,255,255,0.92);
+  font-weight: 900;
+  cursor: pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  user-select: none;
+}
+.lbNav:hover{
+  background: rgba(0,0,0,0.50);
+  border-color: rgba(255,255,255,0.30);
+}
+.lbPrev{ left: 14px; }
+.lbNext{ right: 14px; }
+
+/* Footer */
+.footer{
+  border-top: 1px solid var(--line);
+  margin-top: 22px;
+}
+.footerInner{
+  display:flex;
+  justify-content:space-between;
+  gap: 12px;
+  font-size: 12px;
+  color: rgba(17,17,17,0.55);
+}
+
+/* Responsive */
+@media (max-width: 520px){
+  .iconGrid .iconBtn{
+    width: 96px;
+    height: 96px;
+    flex: 0 0 96px;
+    border-radius: 0;        /* 念のため */
+  }
+}
+  .container{ padding: 18px 12px; }
+  .headerInner{ padding: 12px 12px; }
+
+  /* アイコンを少し小さく */
+  .iconGrid .iconBtn{
+    width: 100px;
+    height: 100px;
+    flex: 0 0 100px;
+  }
+
+  .lightbox{ padding: 10px; }
+  .lbNav{ width: 40px; height: 40px; }
+  .lbPrev{ left: 10px; }
+  .lbNext{ right: 10px; }
+}
+
+
+/* About: readability */
+.bioText { }
+.bioP{
+  margin: 0 0 16px;
+  line-height: 2.05;
+  color: var(--muted);
+}
+
+/* About: images (studio/process) */
+.aboutGallery{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.aboutThumb{
+  width: 112px;
+  height: 112px;
+  flex: 0 0 112px;
+  border: 1px solid var(--line);
+  background: #fff;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.aboutThumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 520px){
+  .aboutThumb{
+    width: 96px;
+    height: 96px;
+    flex: 0 0 96px;
+  }
+}
